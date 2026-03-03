@@ -1,1 +1,40 @@
 
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main class="timer">
+        <h1>Таймер</h1>
+
+        <div id="display" class="display">00:00:00</div>
+
+        <div class="inputs">
+            <label>
+                Часы
+                <input id="hours" type="number" min="0" value="0">
+            </label>
+            <label>
+                Минуты
+                <input id="minutes" type="number" min="0" value="0">
+            </label>
+            <label>
+                Секунды
+                <input id="seconds" type="number" min="0" value="0">
+            </label>
+        </div>
+
+        <div class="buttons">
+            <button id="start" type="button">Старт</button>
+            <button id="pause" type="button">Пауза</button>
+            <button id="stop" type="button">Стоп</button>
+        </div>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>

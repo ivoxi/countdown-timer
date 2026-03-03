@@ -1,8 +1,8 @@
-export const timerState = {
-    durationMs: 300000,
-    remainingMs: 300000,
+export const state = {
+    durationMs: 0,
+    remainingMs: 0,
     isRunning: false,
     intervalId: null,
     targetTime: null
-}
+};
 

@@ -3,6 +3,7 @@ import { state } from "./state";
 export function setDuration(durationMs) {
     state.durationMs = durationMs;
     state.remainingMs = durationMs;
+    state.targetTime = null;
 }
 
 export function tick() {
@@ -18,25 +19,32 @@ export function tick() {
 }
 
 export function timerStart() {
-    if (state.isRunning || !state.remainingMs || state.remainingMs <= 0) {
+    if (state.isRunning || state.remainingMs <= 0) {
         return;
     }
+
     state.targetTime = Date.now() + state.remainingMs;
-    state.intervalId = setInterval(tick, 50);
+    state.intervalId = setInterval(tick, 200);
     state.isRunning = true;
 }
 
 export function timerPause() {
     if (!state.isRunning) return;
+
+    state.remainingMs = Math.max(state.targetTime - Date.now(), 0);
     clearInterval(state.intervalId);
     state.intervalId = null;
+    state.targetTime = null;
     state.isRunning = false;
 }
 
 export function timerStop() {
-    if (!state.isRunning) return;
-    clearInterval(state.intervalId);
+    if (state.intervalId) {
+        clearInterval(state.intervalId);
+    }
+
     state.intervalId = null;
     state.isRunning = false;
-    state.remainingMs = 0;
+    state.targetTime = null;
+    state.remainingMs = state.durationMs;
 }

@@ -1,55 +1,111 @@
+/* ===== Reset ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 * {
-    box-sizing: border-box;
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+
+/* ===== Переменные ===== */
+
+:root {
+  --bg: hsl(0, 0%, 100%);
+  --text: #000000;
+  --accent: #4f46e5;
+
+  --radius: 12px;
+}
+
+
+/* ===== База страницы ===== */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: sans-serif;
-    background: #f5f5f5;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  height: 100%;
+
+  background: var(--bg);
+  color: var(--text);
+
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ===== Типографика ===== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+/* ===== Удобства ===== */
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.header {
+    padding: 0 15px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0090dd;
+    height: 80px;
+}
+
+.header h1{
+    color: white;
+}
+
+main {
+    padding: 10px 15px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    background: #dddcdc;
+    gap: 20px;
 }
 
 .timer {
-    max-width: 360px;
-    margin: 40px auto;
-    padding: 16px;
-    background: #fff;
-    border: 1px solid #ddd;
-}
-
-h1 {
-    margin: 0 0 16px;
-    font-size: 24px;
-}
-
-.display {
-    margin-bottom: 16px;
-    font-size: 32px;
-    text-align: center;
-}
-
-.inputs {
-    display: grid;
-    gap: 10px;
-    margin-bottom: 16px;
-}
-
-label {
-    display: grid;
-    gap: 4px;
-    font-size: 14px;
-}
-
-input {
-    padding: 8px;
-}
-
-.buttons {
     display: flex;
-    gap: 8px;
+    width: 70%;
+    height: 180px;
+    border: 2px solid gray;
+    border-radius: 3px;
 }
 
-button {
-    flex: 1;
-    padding: 8px;
-}
+
+

@@ -14,18 +14,51 @@
       <section class="timer">
         <div class="timer-display">
           <span class="hours">00</span>
+          <input
+            id="hours-input"
+            class="timer-input"
+            type="number"
+            placeholder="00"
+            hidden
+          />
           <span class="separator">:</span>
           <span class="minutes">00</span>
+          <input
+            id="minutes-input"
+            class="timer-input"
+            type="number"
+            placeholder="00"
+            hidden
+          />
           <span class="separator">:</span>
           <span class="seconds">00</span>
+          <input
+            id="seconds-input"
+            class="timer-input"
+            type="number"
+            placeholder="00"
+            hidden
+          />
         </div>
+        <button type="button" class="apply-btn">Apply</button>
         <div class="timer-controls">
-          <button type="button" class="start-btn">Начать</button>
-          <button type="button" class="pause-btn">Пауза</button>
-          <button type="button" class="reset-btn">Сброс</button>
+          <button type="button" class="start-btn">
+            <img src="/src/source/start-ico.svg" alt="start-btn" srcset="" />
+          </button>
+          <button type="button" class="pause-btn">
+            <img src="/src/source/pause-ico.svg" alt="pause-btn" srcset="" />
+          </button>
+          <button type="button" class="reset-btn">
+            <img
+              src="/src/source/restart-ico.svg"
+              alt="restart-btn"
+              srcset=""
+            />
+          </button>
         </div>
       </section>
     </main>
     <footer></footer>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

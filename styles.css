@@ -90,7 +90,7 @@ button {
 }
 
 main {
-    padding: 10px 15px; 
+    padding: 100px 15px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,12 +100,47 @@ main {
 }
 
 .timer {
-    display: flex;
-    width: 70%;
-    height: 180px;
-    border: 2px solid gray;
-    border-radius: 3px;
+  padding: 10px 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 600px;
+  height: 180px;
+  border-radius: 3px;
 }
+
+.timer-display {
+  font-weight: 700;
+  font-size: xx-large;
+} 
+
+.timer-input {
+  width: 2ch;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  appearance: textfield;
+}
+
+.timer-input::-webkit-outer-spin-button,
+.timer-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.timer-controls img {
+  height: 40px;
+  width: 40px;
+}
+
 
 
 

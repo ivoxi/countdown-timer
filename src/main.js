@@ -1,3 +1,4 @@
-import { initEditableTimeFields } from "./ui.js";
+import { init, render } from "./ui.js";
 
-initEditableTimeFields();
+init();
+render();

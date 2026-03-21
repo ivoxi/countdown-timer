@@ -1,4 +1,5 @@
-import { state } from "./state";
+import { state } from "./state.js";
+import { render } from "./ui.js";
 
 export function setDuration(durationMs) {
     state.durationMs = durationMs;
@@ -16,6 +17,8 @@ export function tick() {
     } else {
         state.remainingMs = remaining;
     }
+
+    render();
 }
 
 export function timerStart() {
@@ -36,6 +39,7 @@ export function timerPause() {
     state.intervalId = null;
     state.targetTime = null;
     state.isRunning = false;
+    state.isPause = true;
 }
 
 export function timerStop() {
